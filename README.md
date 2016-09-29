@@ -36,3 +36,10 @@ How to install ?
 Type `npm install` and `npm start` to run the app in development mode, and `npm run build` to generate a production build.
 
 See: [500px applications](http://500px.com/settings/applications?from=developers)
+
+To Do
+=====
+
+ * CSS transitions are not working correctly, some work is needed
+ * Add play/pause options
+ * Add Help/About page
