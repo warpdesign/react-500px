@@ -13,7 +13,7 @@ The working application can be seen live [here](http://experiments.warpdesign.fr
 Why ?
 =====
 
-This small application was developped to getting familiar with ReactJS development with ES6 and webpack.
+This small application was developped to get familiar with ReactJS development with ES6 and webpack.
 
 It uses the following components:
 
