@@ -33,10 +33,6 @@ In order to run the application, you will need the following tools (any develope
 How to install ?
 ================
 
-Type `npm install` and `webpack-dev-server` to run the app in development mode.
-
-Since 500px API access needs an API key, you need to create a json file called 'consumer_key.json' with your consumer_key at the root of the project to be able to use the app in development:
-
-`{ "500px": "CONSUMER_KEY" }`
+Type `npm install` and `npm start` to run the app in development mode, and `npm run build` to generate a production build.
 
 See: [500px applications](http://500px.com/settings/applications?from=developers)
