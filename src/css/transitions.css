@@ -1,0 +1,146 @@
+/* transition 1 */
+#viewer.transition1 .fullImage{
+	-webkit-transition-property:-webkit-transform, opacity;
+	-webkit-transition-duration:2s;
+	-webkit-transition-timing-function:ease-in;
+	-webkit-transform:rotateZ(-2deg) scale(0.97);
+
+	-ms-transition-property:-ms-transform, opacity;
+	-ms-transition-duration:2s;
+	-ms-transition-timing-function:ease-in;
+	-ms-transform:rotateZ(-2deg) scale(0.97);
+}
+
+#viewer.transition1 .fullImage.shown{
+	-webkit-transform:scale(1.0) rotateZ(0deg);
+
+	-ms-transform:scale(1.0) rotateZ(0deg);
+}
+
+#viewer.transition1 .fullImage.hidden{
+	-webkit-transform:scale(1.2) rotateZ(2deg);
+
+	-ms-transform:scale(1.2) rotateZ(2deg);
+}
+
+/* transition 2 */
+
+#viewer.transition2 .fullImage{
+	-webkit-transition-property:-webkit-transform, opacity;
+	-webkit-transition-duration:1.5s;
+	-webkit-transition-timing-function:bounce;
+	-webkit-transform:translate3D(-2000px,0,0);
+
+	-ms-transition-property:-ms-transform, opacity;
+	-ms-transition-duration:1.5s;
+	-ms-transition-timing-function:bounce;
+	-ms-transform:translate3D(-2000px,0,0);
+}
+
+#viewer.transition2 .fullImage.shown{
+	-webkit-transform:translate3D(0,0,0);
+
+	-ms-transform:translate3D(0,0,0);
+}
+
+#viewer.transition2 .fullImage.hidden{
+	-webkit-transform:translate3D(2000px,0,0);
+
+	-ms-transform:translate3D(2000px,0,0);
+}
+
+/* end transitions */
+
+/*
+.fullImage, .fullImage img{
+	-webkit-transition-property:all;
+	-webkit-transition-duration:.5s;
+	-webkit-transition-timing-function:bounce;
+}
+*/
+
+.hover .informations{
+	-webkit-transform:translateY(0);
+
+	-ms-transform:translateY(0);
+}
+
+.fullImage .informations{
+	-webkit-transform:translate3D(0, -65px, 0);
+	-webkit-transition-property:all;
+	-webkit-transition-duration:.5s;
+
+	-ms-transform:translate3D(0, -65px, 0);
+	-ms-transition-property:all;
+	-ms-transition-duration:.5s;
+}
+
+ul img{
+	-webkit-transition-property:all;
+	-webkit-transition-duration:1s;
+
+	-ms-transition-property:all;
+	-ms-transition-duration:1s;
+}
+
+@-webkit-keyframes spinwheel {
+from {
+	-webkit-transform: rotate(0deg);
+	}
+to {
+	-webkit-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes spinwheel {
+from {
+	-ms-transform: rotate(0deg);
+	}
+to {
+	-ms-transform: rotate(360deg);
+	}
+}
+
+#controls{
+	-webkit-transition-property:all;
+	-webkit-transition-duration:.5s;
+	-webkit-transform:translate3D(0,100px,0);
+
+	-ms-transition-property:all;
+	-ms-transition-duration:.5s;
+	-ms-transform:translate3D(0,100px,0);
+}
+
+#controls.visible{
+	-webkit-transform:translate3D(0,0,0);
+
+	-ms-transform:translate3D(0,0,0);
+}
+
+#loader{
+	-webkit-animation-name: spinwheel;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: .7s;
+
+	-ms-animation-name: spinwheel;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-timing-function: linear;
+	-ms-animation-duration: .7s;
+}
+
+.bt{
+	-webkit-transition-property:all;
+	-webkit-transition-duration:.5s;
+
+	-ms-transition-property:all;
+	-ms-transition-duration:.5s;
+}
+
+#splash{
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration:.8s;
+
+	-ms-transition-property: opacity;
+	-ms-transition-duration:.8s;
+}
