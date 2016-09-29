@@ -1,7 +1,7 @@
 {
   "name": "React500pxSlideshow",
   "version": "1.0.0",
-  "description": "Nice 50px slideshow tutorial written using React & Webpack with ES6",
+  "description": "500px slideshow tutorial written using React & Webpack with ES6",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
