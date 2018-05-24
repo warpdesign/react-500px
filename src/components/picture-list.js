@@ -1,8 +1,9 @@
-import React from 'react';
+import {h, Component} from 'preact';
+
 import PictureItem from './picture-item';
 // import data from 'data/mock';
 
-export default class PictureList extends React.Component {
+export default class PictureList extends Component {
     renderItems() {
         return this.props.pictures.map((picture, index) => <PictureItem key={index} {...picture} setActivePicture={this.props.setActivePicture} />);
     }

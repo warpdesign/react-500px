@@ -20,36 +20,54 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        modulesDirectories: ['node_modules', 'src'],
-        extensions: ['', '.js'],
-        alias: {    
-            "react": "preact-compat",
-            "react-dom": "preact-compat"
-        }
+        modules: ['node_modules', 'src'],
+        extensions: ['.js']
+        // enable if higher compatibility with React is needed
+        // alias: {    
+        //     "react": "preact-compat",
+        //     "react-dom": "preact-compat"
+        // }
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015,presets[]=stage-0']
+                loader: 'babel-loader',
+                options: {
+                    presets: [ // ?presets[]=react,presets[]=es2015,presets[]=stage-0
+                        'react',
+                        'es2015',
+                        'stage-0'
+                    ],
+                    plugins: [
+                        ["transform-react-jsx", { "pragma": "h" }]
+                    ]
+                }
             },
-            { test: /\.css$/, loader: "style!css" }
+            { test: /\.css$/,
+                use: [ 
+                { loader: "style-loader" },
+                { loader: "css-loader" }
+                ]
+            }
         ]
     },
+    mode: 'development',
     devServer: {
-        address: '127.0.0.1',
+        host: '127.0.0.1',
         port: '8888',
         proxy: {
             '/proxy/*': {
                 target: 'http://experiments.warpdesign.fr/',
                 changeOrigin: true
             }
-        }
+        },
+        hot: true
     },
     plugins: [
+        new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
         new WebpackNotifierPlugin({alwaysNotify:true}),
         new HtmlWebpackPlugin({
             template: 'src/html/index.ejs',

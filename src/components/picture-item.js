@@ -1,7 +1,8 @@
-import React from 'react';
+import {h, Component} from 'preact';
+
 import ClassNames from 'classnames';
 
-export default class PictureItem extends React.Component {
+export default class PictureItem extends Component {
     constructor(props)  {
         super(props);
         

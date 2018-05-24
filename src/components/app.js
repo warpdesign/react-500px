@@ -1,4 +1,4 @@
-import React from 'react';
+import {h, Component} from 'preact';
 import data from 'data/mock';
 import PictureList from './picture-list';
 import Viewer from './viewer';
@@ -11,7 +11,7 @@ import stylesAnimations from 'css/transitions.css';
 const API_LIST = '/proxy/500photos.php',
       mp3Sound = 'http://ia600500.us.archive.org/10/items/mia049/mia49a_aphilas_-_lifelong_fiction.mp3';
 
-export default class App extends React.Component {
+export default class App extends Component {
     constructor (props) {
         super(props);
         
@@ -59,7 +59,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <Viewer className="transition1" activePicture={this.state.activePicture} />
+                <Viewer class="transition1" activePicture={this.state.activePicture} />
                 <PictureList 
                     pictures={this.state.pictures}
                     setActivePicture={this.setActivePicture.bind(this)}

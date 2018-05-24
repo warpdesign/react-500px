@@ -1,7 +1,7 @@
-import React from 'react';
+import {h, Component} from 'preact';
 import Loader from './loader';
 
-export default class Viewer extends React.Component {
+export default class Viewer extends Component {
     render() {
         console.log(this.props);
 

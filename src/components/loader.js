@@ -1,4 +1,4 @@
-import React from 'react';
+import {h, Component} from 'preact';
 import classNames from 'classnames';
 
 const Status = {
@@ -10,7 +10,7 @@ const Status = {
 const API_PHOTO = '/proxy/500photos.php?id=';
 
 
-export default class Loader extends React.Component {
+export default class Loader extends Component {
     constructor(props) {
         super(props);
         this.state = {
