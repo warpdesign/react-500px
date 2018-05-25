@@ -1,9 +1,9 @@
 react-500px
 ===========
 
-little 500px popular feed viewer using React + ES6 + webpack http://experiments.warpdesign.fr/react-500px
+little 500px popular feed viewer using preact + ES-2015 + webpack 4
 
-This small React app loads up 'popular' feed from 500px and displays the photos.
+The app loads up 'popular' feed from 500px and displays the photos.
 
 Demo
 ====
@@ -20,15 +20,7 @@ It uses the following components:
 * es6-promise (polyfill)
 * fetch (polyfill)
 
-This is a direct rewrite of an old application I wrote using AngularJS & CSS3 a few years back: [CSS 3 experiments](http://experiments.warpdesign.fr/angularjs-500px)
-
-Requirements
-============
-
-In order to run the application, you will need the following tools (any developer should have these installed but if you're starting with web development you may not have them)
-
- * Node (see [Node.js](http://nodejs.org/download/))
- * webpack
+Version 2.0 it was updated to work with preact instead of React and webpack version was updated to version 4.
 
 How to install ?
 ================
